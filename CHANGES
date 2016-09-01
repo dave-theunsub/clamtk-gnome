@@ -1,8 +1,9 @@
 CHANGELOG for clamtk-gnome:
 
-0.02 - XX XXX 2016
+0.02 - XX Sep 2016
 ------------------
-        *
+        * Fix README file, which has incorrect instructions for
+          manually installing it
 
 0.01 - 6 Sep 2015
 -----------------

@@ -1,15 +1,22 @@
 README for clamtk-gnome
 -----------------------
-Last updated 6 Aug 2016
+Last updated 1 Sep 2016
 
 clamtk-gnome is a simple plugin to allow a right-click,
 context menu scan of files or folders.
 
+There are deb and rpm install files to enable this functionality.
+
 To manually install it:
 Ensure ClamTk is installed. You'll need version 4.00 or newer.
-Copy the clamtk-gnome.desktop file as follows:
+Additionally, you'll need nautilus-python installed.
+
+As root:
+
+# cp images/clamtk-gnome.png /usr/share/pixmaps/clamtk-gnome.png
+# cp clamtk-gnome.1.gz /usr/share/man/man1/
+# cp clamtk-gnome.py /usr/share/nautilus-python/extensions/
 # cp clamtk-gnome.desktop /usr/share/applications/
-You will need to have root privileges for that step.
 
 DEPENDENCIES
 ------------
@@ -18,12 +25,13 @@ nautilus-python
 
 LINKS
 -----
-
-https://dave-theunsub.github.io/clamtk/
-https://launchpad.net/clamtk
 https://github.com/dave-theunsub/clamtk-gnome
-https://github.com/dave-theunsub/clamtk
-https://bitbucket.org/dave_theunsub/clamtk-gnome/
+https://gitlab.com/dave_m/clamtk-gnome
+https://bitbucket.org/dave_theunsub/clamtk-gnome
+https://bitbucket.org/dave_theunsub/build_files
+http://standards.freedesktop.org/desktop-entry-spec/latest/
+
+http://code.google.com/p/clamtk/ (no longer used)
 
 CONTACT
 -------
