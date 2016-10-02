@@ -25,7 +25,9 @@ _ = lambda x: gettext.ldgettext("clamtk-gnome", x)
 from gi.repository import Nautilus, GObject
 
 class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
-       
+    def __init__(self):
+        print("Initializing clamtk-gnome")
+
     def _open_scanner(self, file):
         filename = urllib.unquote(file.get_uri()[7:])
         filename = re.escape(filename)
