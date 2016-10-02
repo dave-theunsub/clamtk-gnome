@@ -20,7 +20,7 @@ import locale
 locale.setlocale(locale.LC_ALL, '')
 
 import gettext
-_ = lambda x: gettext.ldgettext("clamtk", x)
+_ = lambda x: gettext.ldgettext("clamtk-gnome", x)
 
 from gi.repository import Nautilus, GObject
 
