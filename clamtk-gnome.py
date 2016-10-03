@@ -29,7 +29,14 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
         print("Initializing clamtk-gnome")
 
     def _open_scanner(self, file):
-        filename = urllib.unquote(file.get_uri()[7:])
+        filename = file.get_location().get_path()
+        #- file is of type nautiuls-vsf-file
+        # https://github.com/GNOME/nautilus/blob/master/src/nautilus-file.h
+        # which inherits from nautilus-file
+        # https://github.com/GNOME/nautilus/blob/master/src/nautilus-vfs-file.h
+        #- get_location returns a GFile
+        # https://developer.gnome.org/gio/stable/GFile.html
+        # which has the get_path function which returns the absolute path as a string
         filename = re.escape(filename)
 
         #os.chdir(filename)
