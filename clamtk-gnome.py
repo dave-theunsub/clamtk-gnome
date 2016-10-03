@@ -13,8 +13,7 @@
 # b) the "Artistic License".
 
 import os
-import urllib
-import re
+import pipes
 
 import locale
 locale.setlocale(locale.LC_ALL, '')
@@ -37,7 +36,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
         #- get_location returns a GFile
         # https://developer.gnome.org/gio/stable/GFile.html
         # which has the get_path function which returns the absolute path as a string
-        filename = re.escape(filename)
+        filename = pipes.quote(filename)
+        # - when switching to Python 3 we can use shlex.quote() instead
 
         #os.chdir(filename)
         os.system('clamtk %s &' % filename)
