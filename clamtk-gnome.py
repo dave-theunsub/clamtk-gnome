@@ -54,7 +54,7 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
                                  tip=_('Scan %s for threats...') % file.get_name(),
                                  icon='clamtk')
         item.connect('activate', self.menu_activate_cb, file)
-        return item,
+        return [item]
 
     def get_background_items(self, window, file):
         item = Nautilus.MenuItem(name='NautilusPython::openscanner_directory',
@@ -62,4 +62,4 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
                                  tip=_('Scan this directory for threats...'),
                                  icon='clamtk')
         item.connect('activate', self.menu_background_activate_cb, file)
-        return item,
+        return [item]
