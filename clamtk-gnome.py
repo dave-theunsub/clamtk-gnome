@@ -23,6 +23,7 @@ _ = lambda x: gettext.ldgettext("clamtk-gnome", x)
 
 from gi.repository import Nautilus, GObject
 
+
 class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
         print("Initializing clamtk-gnome")
@@ -39,34 +40,34 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
         filename = pipes.quote(filename)
         # - when switching to Python 3 we can use shlex.quote() instead
 
-        #os.chdir(filename)
         os.system('clamtk %s &' % filename)
-        
+
     def menu_activate_cb(self, menu, file):
         self._open_scanner(file)
-        
+
     def menu_background_activate_cb(self, menu, file): 
         self._open_scanner(file)
-       
+
     def get_file_items(self, window, files):
         if len(files) != 1:
             return
-        
         file = files[0]
-        #if not file.is_directory() or file.get_uri_scheme() != 'file':
-        #    return
-        
-        item = Nautilus.MenuItem(name='NautilusPython::openscanner',
-                                 label=_('Scan for threats...') ,
-                                 tip=_('Scan %s for threats...') % file.get_name(),
-                                 icon='clamtk')
+
+        item = Nautilus.MenuItem(
+            name='NautilusPython::openscanner',
+            label=_('Scan for threats...') ,
+            tip=_('Scan %s for threats...') % file.get_name(),
+            icon='clamtk')
         item.connect('activate', self.menu_activate_cb, file)
+
         return [item]
 
     def get_background_items(self, window, file):
-        item = Nautilus.MenuItem(name='NautilusPython::openscanner_directory',
-                                 label=_('Scan directory for threats...'),
-                                 tip=_('Scan this directory for threats...'),
-                                 icon='clamtk')
+        item = Nautilus.MenuItem(
+            name='NautilusPython::openscanner_directory',
+            label=_('Scan directory for threats...'),
+            tip=_('Scan this directory for threats...'),
+            icon='clamtk')
         item.connect('activate', self.menu_background_activate_cb, file)
+
         return [item]
