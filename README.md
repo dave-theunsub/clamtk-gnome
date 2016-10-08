@@ -1,25 +1,38 @@
-# README for clamtk-gnome
+This readme file was last updated 6 Oct 2016
 
-Last updated 7 Sep 2016
+# README for ClamTkGnome
 
-clamtk-gnome is a simple plugin to allow a right-click, context menu scan of files or folders.
+ClamTkGnome is a simple plugin for [ClamTk](https://github.com/dave-theunsub/clamtk) to allow a right-click, context menu scan of files or folders in the Nautilus file manager
 
-There are deb and rpm install files to enable this functionality.
+## Installation
 
-To manually install it:
-* Ensure ClamTk is installed. You'll need version 4.00 or newer.
-* Additionally, you'll need nautilus-python installed.
+### Automatic installation
 
-As root:
-* ```cp images/clamtk-gnome.png /usr/share/pixmaps/clamtk-gnome.png```
-* ```cp clamtk-gnome.1.gz /usr/share/man/man1/```
-* ```cp clamtk-gnome.py /usr/share/nautilus-python/extensions/```
-* ```cp clamtk-gnome.desktop /usr/share/applications/```
+There are deb and rpm packages to install this plugin:
+
+#### On Debian based systems (Ubuntu etc)
+
+`sudo apt-get install clamtk-gnome`
+
+#### On Red Hat based systems
+
+`rpm -i clamtk-gnome`
+
+### Manual installation
+
+1. Install [ClamTk](https://github.com/dave-theunsub/clamtk). You'll need version 4.00 or newer.
+2. Additionally, you need to install these packages:
+  * For Debian based systems: `python-nautilus`
+  * For Red Hat based systems: `nautilus-python`
+3. Download the project files
+4. As root run `cp clamtk-gnome.py /usr/share/nautilus-python/extensions/`
+5. Restart Nautilus
 
 ## Dependencies
 
-* clamtk >= 4.00
-* nautilus-python
+* `clamtk` >= 4.00
+* On Debian based systems: `python-nautilus`
+* On Red Hat based systems: `nautilus-python`
 
 ## Links
 
