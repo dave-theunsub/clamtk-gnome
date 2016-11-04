@@ -4,6 +4,7 @@ This readme file was last updated 6 Oct 2016
 
 ClamTkGnome is a simple plugin for [ClamTk](https://github.com/dave-theunsub/clamtk) to allow a right-click, context menu scan of files or folders in the Nautilus file manager
 
+
 ## Installation
 
 ### Automatic installation
@@ -27,6 +28,24 @@ There are deb and rpm packages to install this plugin:
 3. Download the project files
 4. As root run `cp clamtk-gnome.py /usr/share/nautilus-python/extensions/`
 5. Restart Nautilus
+
+
+## Usage and screenshots
+
+1. Bring up the context menu either by
+   1. right clicking on a directory:
+   
+   ![starting scan alt 1](_img/starting_scan_alt1.png)
+   
+   2. Or by clicking here:
+   
+   ![starting scan alt 2](_img/starting_scan_alt2.png)
+
+2. Click on the scan button
+
+3. Wait for the scan to complete (pleate note that it may take a couple of seconds for the scan to start and also for the "No threats found" message to be shown at the end - even after the message "Scanning completed" has been shown)
+![scan result](_img/scan_result.png)
+
 
 ## Dependencies
 
