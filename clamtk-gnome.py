@@ -58,6 +58,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
             label=_('Scan for threats...') ,
             tip=_('Scan %s for threats...') % file.get_name(),
             icon='clamtk')
+        # - the tooltips are not shown any longer in Nautilus
+        # (the code is kept here in case this changes again for Nautilus
         item.connect('activate', self.menu_activate_cb, file)
 
         return [item]
@@ -68,6 +70,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
             label=_('Scan directory for threats...'),
             tip=_('Scan this directory for threats...'),
             icon='clamtk')
+        # - the tooltips are not shown any longer in Nautilus
+        # (the code is kept here in case this changes again for Nautilus
         item.connect('activate', self.menu_background_activate_cb, file)
 
         return [item]
