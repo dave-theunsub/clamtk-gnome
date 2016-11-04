@@ -34,8 +34,11 @@ There are deb and rpm packages to install this plugin:
 
 1. Bring up the context menu either by
    1. right clicking on a directory:
+   
    ![starting scan alt 1](_img/starting_scan_alt1.png)
+   
    2. Or by clicking here:
+   
    ![starting scan alt 2](_img/starting_scan_alt2.png)
 
 2. Click on the scan button
