@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 #
 # ClamTk, copyright (C) 2004-2017 Dave M
 #

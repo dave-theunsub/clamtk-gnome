@@ -7,6 +7,8 @@ CHANGELOG for clamtk-gnome:
         * Make build for CentOS 7, now possible with the
           nautilus-python rpm in EPEL.
         * Python file has been renamed to clamtk-gnome.py.
+        * Use xz compression.
+        * Change Python interpreter from /usr/bin/env.
 
 0.01 - 6 Sep 2015
 -----------------
