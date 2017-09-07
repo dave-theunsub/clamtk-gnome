@@ -63,7 +63,6 @@ There are deb and rpm packages to install this plugin:
 
 * http://dave-theunsub.github.io/clamtk/
 * https://github.com/dave-theunsub/clamtk-gnome
-* https://gitlab.com/dave_m/clamtk-gnome
 * https://bitbucket.org/davem_/clamtk-gnome
 * http://standards.freedesktop.org/desktop-entry-spec/latest/
 * http://code.google.com/p/clamtk/ (no longer used)
