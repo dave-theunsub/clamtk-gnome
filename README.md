@@ -1,8 +1,10 @@
-This readme file was last updated 6 Oct 2016
+This readme file was last updated 7 Sept 2017
 
-# README for ClamTkGnome
+# README for clamtk-gnome
 
-ClamTkGnome is a simple plugin for [ClamTk](https://github.com/dave-theunsub/clamtk) to allow a right-click, context menu scan of files or folders in the Nautilus file manager
+clamtk-gnome is a simple plugin for
+[ClamTk](https://github.com/dave-theunsub/clamtk) to allow a right-click,
+context menu scan of files or folders in the Nautilus file manager.
 
 
 ## Installation
@@ -15,9 +17,13 @@ There are deb and rpm packages to install this plugin:
 
 `sudo apt-get install clamtk-gnome`
 
-#### On Red Hat based systems
+#### On CentOS systems
 
-`rpm -i clamtk-gnome`
+`yum install clamtk-gnome-0.02-1.fc.noarch.rpm`
+
+#### On Fedora systems
+
+`dnf install clamtk-gnome-0.02-1.fc.noarch.rpm`
 
 ### Manual installation
 
@@ -58,11 +64,11 @@ There are deb and rpm packages to install this plugin:
 * http://dave-theunsub.github.io/clamtk/
 * https://github.com/dave-theunsub/clamtk-gnome
 * https://gitlab.com/dave_m/clamtk-gnome
-* https://bitbucket.org/dave_theunsub/clamtk-gnome
+* https://bitbucket.org/davem_/clamtk-gnome
 * http://standards.freedesktop.org/desktop-entry-spec/latest/
 * http://code.google.com/p/clamtk/ (no longer used)
 
 ## Contact
 
-* Dave M, dave.nerd AT gmail DOT com
-* Tord D, tord.dellsen AT gmail DOT com
+* Dave M, dave.nerd at gmail
+* Tord D, tord.dellsen at gmail

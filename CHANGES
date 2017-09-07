@@ -1,8 +1,12 @@
 CHANGELOG for clamtk-gnome:
 
-0.02 - 7 Oct 2016
-------------------
-        * Fixed installation instructions in the README file.
+0.02 - 7 Sep 2017
+-----------------
+        * Fix README file, which has incorrect instructions for
+          manually installing it.
+        * Make build for CentOS 7, now possible with the
+          nautilus-python rpm in EPEL.
+        * Python file has been renamed to clamtk-gnome.py.
 
 0.01 - 6 Sep 2015
 -----------------

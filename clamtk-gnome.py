@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# ClamTk, copyright (C) 2004-2016 Dave M
+# ClamTk, copyright (C) 2004-2017 Dave M
 #
 # This file is part of ClamTk (http://code.google.com/p/clamtk/).
 #
