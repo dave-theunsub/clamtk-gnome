@@ -28,41 +28,43 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
         print("Initializing clamtk-gnome")
 
-    def _open_scanner(self, file):
-        filename = file.get_location().get_path()
-        #- file is of type nautiuls-vsf-file
-        # https://github.com/GNOME/nautilus/blob/master/src/nautilus-file.h
-        # which inherits from nautilus-file
-        # https://github.com/GNOME/nautilus/blob/master/src/nautilus-vfs-file.h
-        #- get_location returns a GFile
-        # https://developer.gnome.org/gio/stable/GFile.html
-        # which has the get_path function which returns the absolute path as a string
-        filename = pipes.quote(filename)
-        # - when switching to Python 3 we can use shlex.quote() instead
+    def _open_scanner(self, files):
+        allPaths = list ()
+        for file in files:
+            filename = file.get_location().get_path()
+            #- file is of type nautiuls-vsf-file
+            # https://github.com/GNOME/nautilus/blob/master/src/nautilus-file.h
+            # which inherits from nautilus-file
+            # https://github.com/GNOME/nautilus/blob/master/src/nautilus-vfs-file.h
+            #- get_location returns a GFile
+            # https://developer.gnome.org/gio/stable/GFile.html
+            # which has the get_path function which returns the absolute path as a string
+            filename = pipes.quote(filename)
+            # - when switching to Python 3 we can use shlex.quote() instead
+            allPaths.append (filename)
+        print (' '.join(allPaths))
+        os.system('clamtk %s &' % ' '.join(allPaths))
 
-        os.system('clamtk %s &' % filename)
+    def menu_activate_cb(self, menu, files):
+        self._open_scanner(files)
 
-    def menu_activate_cb(self, menu, file):
-        self._open_scanner(file)
-
-    def menu_background_activate_cb(self, menu, file): 
-        self._open_scanner(file)
+    def menu_background_activate_cb(self, menu, files):
+        self._open_scanner(files)
 
     def get_file_items(self, window, files):
-        if len(files) != 1:
+        if len(files) < 1:
             return
-        file = files[0]
+        else:
+            item = Nautilus.MenuItem(
+                name='NautilusPython::openscanner',
+                label=_('Scan for threats...') ,
+                tip=_('Scan for threats...'),
+                icon='clamtk')
+            # - the tooltips are not shown any longer in Nautilus
+            # (the code is kept here in case this changes again for Nautilus
+            item.connect('activate', self.menu_activate_cb, files)
+            return [item]
 
-        item = Nautilus.MenuItem(
-            name='NautilusPython::openscanner',
-            label=_('Scan for threats...') ,
-            tip=_('Scan %s for threats...') % file.get_name(),
-            icon='clamtk')
-        # - the tooltips are not shown any longer in Nautilus
-        # (the code is kept here in case this changes again for Nautilus
-        item.connect('activate', self.menu_activate_cb, file)
-
-        return [item]
 
     def get_background_items(self, window, file):
         item = Nautilus.MenuItem(
