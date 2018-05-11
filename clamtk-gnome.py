@@ -13,7 +13,10 @@
 # b) the "Artistic License".
 
 import os
-import pipes
+try:
+    from shlex import quote as cmd_quote
+except ImportError:
+    from pipes import quote as cmd_quote
 
 import locale
 locale.setlocale(locale.LC_ALL, '')
@@ -39,10 +42,9 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
             #- get_location returns a GFile
             # https://developer.gnome.org/gio/stable/GFile.html
             # which has the get_path function which returns the absolute path as a string
-            filename = pipes.quote(filename)
+            filename = cmd_quote(filename)
             # - when switching to Python 3 we can use shlex.quote() instead
             allPaths.append (filename)
-        print (' '.join(allPaths))
         os.system('clamtk %s &' % ' '.join(allPaths))
 
     def menu_activate_cb(self, menu, files):
