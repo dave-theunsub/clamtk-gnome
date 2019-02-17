@@ -1,4 +1,4 @@
-This readme file was last updated 7 Sept 2017
+This readme file was last updated 2019 02 17
 
 # README for clamtk-gnome
 
@@ -15,7 +15,9 @@ There are deb and rpm packages to install this plugin:
 
 #### On Debian based systems (Ubuntu etc)
 
-`sudo apt-get install clamtk-gnome`
+`dpkg -i clamtk-gnome_0.02-1_all.deb`
+
+`apt-get install -f`
 
 #### On CentOS systems
 
@@ -27,7 +29,7 @@ There are deb and rpm packages to install this plugin:
 
 ### Manual installation
 
-1. Install [ClamTk](https://github.com/dave-theunsub/clamtk). You'll need version 4.00 or newer.
+1. Install [ClamTk](https://github.com/dave-theunsub/clamtk). You'll need version 5.00 or newer.
 2. Additionally, you need to install these packages:
   * For Debian based systems: `python-nautilus`
   * For Red Hat based systems: `nautilus-python`
@@ -55,17 +57,18 @@ There are deb and rpm packages to install this plugin:
 
 ## Dependencies
 
-* `clamtk` >= 4.00
+* `clamtk` >= 5.00
 * On Debian based systems: `python-nautilus`
 * On Red Hat based systems: `nautilus-python`
 
 ## Links
 
-* http://dave-theunsub.github.io/clamtk/
+* https://gitlab.com/dave_m/clamtk-gnome
 * https://github.com/dave-theunsub/clamtk-gnome
 * https://bitbucket.org/davem_/clamtk-gnome
 * http://standards.freedesktop.org/desktop-entry-spec/latest/
 * http://code.google.com/p/clamtk/ (no longer used)
+* http://dave-theunsub.github.io/clamtk/ (deprecated)
 
 ## Contact
 

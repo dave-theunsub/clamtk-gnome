@@ -1,8 +1,9 @@
 #!/usr/bin/python
 #
-# ClamTk, copyright (C) 2004-2017 Dave M
+# ClamTk, copyright (C) 2004-2019 Dave M
 #
-# This file is part of ClamTk (http://code.google.com/p/clamtk/).
+# This file is part of ClamTk
+# (https://gitlab.com/dave_m/clamtk/wikis/Home)
 #
 # ClamTk is free software; you can redistribute it and/or modify it
 # under the terms of either:
