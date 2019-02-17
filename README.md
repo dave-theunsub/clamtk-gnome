@@ -29,7 +29,7 @@ There are deb and rpm packages to install this plugin:
 
 ### Manual installation
 
-1. Install [ClamTk](https://github.com/dave-theunsub/clamtk). You'll need version 5.00 or newer.
+1. Install [ClamTk](https://gitlab.com/dave_m/clamtk/wikis/Downloads). You'll need version 5.00 or newer.
 2. Additionally, you need to install these packages:
   * For Debian based systems: `python-nautilus`
   * For Red Hat based systems: `nautilus-python`
@@ -64,8 +64,8 @@ There are deb and rpm packages to install this plugin:
 ## Links
 
 * https://gitlab.com/dave_m/clamtk-gnome
-* https://github.com/dave-theunsub/clamtk-gnome
 * https://bitbucket.org/davem_/clamtk-gnome
+* https://github.com/dave-theunsub/clamtk-gnome
 * http://standards.freedesktop.org/desktop-entry-spec/latest/
 * http://code.google.com/p/clamtk/ (no longer used)
 * http://dave-theunsub.github.io/clamtk/ (deprecated)
