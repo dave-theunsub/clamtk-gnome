@@ -1,6 +1,6 @@
-#!/usr/bin/python
-#
-# ClamTk, copyright (C) 2004-2019 Dave M
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ClamTk, copyright (C) 2004-2019 Dave M, Tord Dellsén
 #
 # This file is part of ClamTk
 # (https://gitlab.com/dave_m/clamtk/wikis/Home)
@@ -14,8 +14,12 @@
 # b) the "Artistic License".
 
 import os
-import pipes
-
+try:
+    # Python 3
+    from shlex import quote
+except ImportError:
+    # Python 2
+    from pipes import quote
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
@@ -31,15 +35,15 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
 
     def _open_scanner(self, file):
         filename = file.get_location().get_path()
-        #- file is of type nautiuls-vsf-file
+        # - file is of type nautiuls-vsf-file
         # https://github.com/GNOME/nautilus/blob/master/src/nautilus-file.h
         # which inherits from nautilus-file
         # https://github.com/GNOME/nautilus/blob/master/src/nautilus-vfs-file.h
-        #- get_location returns a GFile
+        # - get_location returns a GFile
         # https://developer.gnome.org/gio/stable/GFile.html
         # which has the get_path function which returns the absolute path as a string
-        filename = pipes.quote(filename)
-        # - when switching to Python 3 we can use shlex.quote() instead
+
+        filename = quote(filename)
 
         os.system('clamtk %s &' % filename)
 

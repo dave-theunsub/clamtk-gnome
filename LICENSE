@@ -1,13 +1,16 @@
 COPYRIGHT AND LICENCE
 
-ClamTk, copyright (C) 2004-2017 Dave M 
-https://github.com/dave-theunsub/clamtk
+ClamTk, copyright (C) 2004-2019 Dave M, Tord Dellsén
+https://gitlab.com/dave_m/clamtk-gnome
 https://bitbucket.org/davem_/clamtk-gnome/
 
 No longer used:
 http://code.google.com/p/clamtk/
 http://freshmeat.net/projects/clamtk
 http://clamtk.sourceforge.net
+
+Deprecated:
+https://github.com/dave-theunsub/clamtk
 
 Dave M <dave.nerd at gmail>
 0x6ADA59DE
@@ -19,4 +22,4 @@ a) the GNU General Public License as published by the Free
 Software Foundation; either version 1, or (at your option)
 any later version, or
 
-b) the "Artistic License". 
+b) the "Artistic License".

@@ -1,11 +1,11 @@
 CHANGELOG for clamtk-gnome:
 
-0.03 - 17 Feb 2019
-------------------
-    * Move to gtk3.
+0.03 - 20190412
+---------------
+    * Allow for python3.
 
-0.02 - 7 Sep 2017
------------------
+0.02 - 20170907
+---------------
     * Fix README file, which has incorrect instructions for
       manually installing it.
     * Make build for CentOS 7, now possible with the
@@ -14,6 +14,6 @@ CHANGELOG for clamtk-gnome:
     * Use xz compression.
     * Change Python interpreter from /usr/bin/env.
 
-0.01 - 6 Sep 2015
------------------
+0.01 - 20150906
+---------------
     * Initial release.
