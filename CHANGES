@@ -1,5 +1,10 @@
 CHANGELOG for clamtk-gnome:
 
+0.04 - 20200209
+---------------
+    * Improvements to python3 code.
+    * Backwards compatibility with python2 removed.
+
 0.03 - 20190412
 ---------------
     * Allow for python3.
