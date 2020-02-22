@@ -1,5 +1,9 @@
 CHANGELOG for clamtk-gnome:
 
+0.05 - 20200222
+---------------
+    * Fix for Github #15 ("Problem with filenames with spaces in nautilus"). Thanks, j-licht!
+
 0.04 - 20200209
 ---------------
     * Improvements to python3 code.

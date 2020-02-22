@@ -1,4 +1,4 @@
-This readme file was last updated 2019 04 07
+This readme file was last updated 20200222
 
 # README for clamtk-gnome
 
@@ -41,7 +41,7 @@ There are deb and rpm packages to install this plugin:
   * For Debian based systems: `python-nautilus`
   * For Red Hat based systems: `nautilus-python`
 3. Download the project files
-4. As root run `cp clamtk-gnome.py /usr/share/nautilus-python/extensions/`
+4. As root: `cp clamtk-gnome.py /usr/share/nautilus-python/extensions/`
 5. Restart Nautilus
 
 

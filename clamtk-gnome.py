@@ -13,10 +13,8 @@
 #
 # b) the "Artistic License".
 
-import subprocess
-from shlex import quote
-
 import locale
+import subprocess
 
 locale.setlocale(locale.LC_ALL, "")
 
@@ -48,7 +46,6 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
         # https://developer.gnome.org/gio/stable/GFile.html
         # which has the get_path function which returns the absolute path as a string
 
-        filename = quote(filename)
         cmd = ["clamtk", filename]
         subprocess.Popen(cmd)
 
