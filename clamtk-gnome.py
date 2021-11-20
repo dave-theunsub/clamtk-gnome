@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ClamTk, copyright (C) 2004-2020 Dave M, Tord Dellsén
+# ClamTk, copyright (C) 2004-2021 Dave M, Tord Dellsén
 #
 # This file is part of ClamTk
 # (https://gitlab.com/dave_m/clamtk/wikis/Home)

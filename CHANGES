@@ -1,28 +1,35 @@
 CHANGELOG for clamtk-gnome:
 
+6.14 - 20211120
+---------------
+    * This is exactly the same build as 0.05 but with a much
+      higher version number. This is to fix a mistake (and not
+      my fault for a change)
+    * The README.md was updated
+
 0.05 - 20200222
 ---------------
     * Fix for Github #15 ("Problem with filenames with spaces in nautilus"). Thanks, j-licht!
 
 0.04 - 20200209
 ---------------
-    * Improvements to python3 code.
-    * Backwards compatibility with python2 removed.
+    * Improvements to python3 code
+    * Backwards compatibility with python2 removed
 
 0.03 - 20190412
 ---------------
-    * Allow for python3.
+    * Allow for python3
 
 0.02 - 20170907
 ---------------
     * Fix README file, which has incorrect instructions for
-      manually installing it.
+      manually installing it
     * Make build for CentOS 7, now possible with the
-      nautilus-python rpm in EPEL.
+      nautilus-python rpm in EPEL
     * Python file has been renamed to clamtk-gnome.py.
-    * Use xz compression.
-    * Change Python interpreter from /usr/bin/env.
+    * Use xz compression
+    * Change Python interpreter from /usr/bin/env
 
 0.01 - 20150906
 ---------------
-    * Initial release.
+    * Initial release
