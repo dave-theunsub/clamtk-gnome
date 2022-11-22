@@ -26,7 +26,7 @@ _ = gettext.gettext
 
 import gi
 
-gi.require_version("Nautilus", "3.0")
+gi.require_version("Nautilus", "4.0")
 
 from gi.repository import Nautilus
 from gi.repository import GObject
@@ -55,7 +55,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
     def menu_background_activate_cb(self, menu, file):
         self._open_scanner(file)
 
-    def get_file_items(self, window, files):
+    def get_file_items(self, *args):
+        files = args[-1]
         if len(files) != 1:
             return
         file = files[0]
@@ -72,7 +73,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
 
         return [item]
 
-    def get_background_items(self, window, file):
+    def get_background_items(self, *args):
+        file = args[-1]
         item = Nautilus.MenuItem(
             name="NautilusPython::openscanner_directory",
             label=_("Scan directory for threats..."),
