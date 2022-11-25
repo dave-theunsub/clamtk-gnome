@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ClamTk, copyright (C) 2004-2021 Dave M, Tord Dellsén
+# ClamTk, copyright (C) 2004-2022 Dave M, Tord Dellsén
 #
 # This file is part of ClamTk
-# (https://gitlab.com/dave_m/clamtk/wikis/Home)
+# https://github.com/dave-theunsub/clamtk-gnome
 #
 # ClamTk is free software; you can redistribute it and/or modify it
 # under the terms of either:
@@ -12,6 +12,7 @@
 # Foundation; either version 1, or (at your option) any later version, or
 #
 # b) the "Artistic License".
+# Fri 25 Nov 2022 02:59:09 AM CST
 
 import locale
 import subprocess
@@ -26,7 +27,7 @@ _ = gettext.gettext
 
 import gi
 
-gi.require_version("Nautilus", "3.0")
+gi.require_version("Nautilus", "4.0")
 
 from gi.repository import Nautilus
 from gi.repository import GObject
@@ -55,7 +56,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
     def menu_background_activate_cb(self, menu, file):
         self._open_scanner(file)
 
-    def get_file_items(self, window, files):
+    def get_file_items(self, *args):
+        files = args[-1]
         if len(files) != 1:
             return
         file = files[0]
@@ -72,7 +74,8 @@ class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
 
         return [item]
 
-    def get_background_items(self, window, file):
+    def get_background_items(self, *args):
+        file = args[-1]
         item = Nautilus.MenuItem(
             name="NautilusPython::openscanner_directory",
             label=_("Scan directory for threats..."),

@@ -1,4 +1,4 @@
-This readme file was last updated 20211120
+This readme file was last checked or updated 20221125
 
 # README for clamtk-gnome
 
@@ -18,24 +18,24 @@ There are deb and rpm packages to install this plugin:
 
 #### On Debian based systems (Ubuntu etc)
 
-`dpkg -i clamtk-gnome_6.14-1_all.deb`
+`dpkg -i clamtk-gnome_6.15-1_all.deb`
 
 `apt-get install -f`
 
 #### On CentOS systems
 
-`yum install clamtk-gnome-6.14-1.fc.noarch.rpm`
+`yum install clamtk-gnome-6.15-1.fc.noarch.rpm`
 
 #### On Fedora systems
 
-`dnf install clamtk-gnome-6.14-1.fc.noarch.rpm`
+`dnf install clamtk-gnome-6.15-1.fc.noarch.rpm`
 
 ### Option B: Manual installation
 
 1. Install [clamtk](https://github.com/dave-theunsub/clamtk/releases)
 2. Additionally, you need to install these packages:
-  * For Debian based systems: `python-nautilus`
-  * For RedHat based systems: `nautilus-python`
+  * For Debian/Ubuntu based systems: `python-nautilus`
+  * For RedHat/Fedora based systems: `nautilus-python`
 3. Download the .tar.xz file
 4. As root: `cp clamtk-gnome.py /usr/share/nautilus-python/extensions/`
 5. Restart Nautilus or log out and log back in
@@ -63,6 +63,7 @@ There are deb and rpm packages to install this plugin:
 * `clamtk` >= 6.00
 * On Debian based systems: `python-nautilus`
 * On Red Hat based systems: `nautilus-python`
+* nautilus-python 4 with >= 6.15
 
 ## Links
 
@@ -72,5 +73,4 @@ There are deb and rpm packages to install this plugin:
 
 ## Contact
 
-* Dave M, dave.nerd at gmail
-* Tord D, tord.dellsen at gmail
+* Dave M, dave.nerd @gmail.com

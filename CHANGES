@@ -1,5 +1,11 @@
 CHANGELOG for clamtk-gnome:
 
+6.15 - 20221125
+---------------
+    * Updated to use Nautilus 43 and nautilus-python 4
+      https://github.com/dave-theunsub/clamtk-gnome/issues/17
+    * Update year 2021-2022
+
 6.14 - 20211120
 ---------------
     * This is exactly the same build as 0.05 but with a much
