@@ -35,7 +35,7 @@ There are deb and rpm packages to install this plugin:
 
 `dnf install clamtk-gnome-6.15-1.fc.noarch.rpm`
 
-### Option B: Manual installation
+### Option C: Manual installation
 
 1. Install [clamtk](https://github.com/dave-theunsub/clamtk/releases)
 
