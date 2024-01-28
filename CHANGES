@@ -1,5 +1,11 @@
 CHANGELOG for clamtk-gnome:
 
+6.16 - 20240128
+---------------
+    * Add URL to clamtk.py
+    * Update README.md with more details and some fixes
+    * Update year, 2022 - 2024
+
 6.15 - 20221202
 ---------------
     * Updated to use Nautilus 43 and nautilus-python 4

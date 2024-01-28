@@ -1,30 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ClamTk, copyright (C) 2004-2022 Dave M, Tord Dellsén
+# clamtk, copyright (C) 2004-2024 Dave M, Tord Dellsén
 #
-# This file is part of ClamTk
+# This file is part of clamtk
+# Dave M <dave.nerd@gmail.com>
+# https://github.com/dave-theunsub/clamtk
 # https://github.com/dave-theunsub/clamtk-gnome
 #
-# ClamTk is free software; you can redistribute it and/or modify it
+# clamtk is free software; you can redistribute it and/or modify it
 # under the terms of either:
 #
 # a) the GNU General Public License as published by the Free Software
 # Foundation; either version 1, or (at your option) any later version, or
 #
 # b) the "Artistic License".
-# Fri 25 Nov 2022 02:59:09 AM CST
 
 import locale
 import subprocess
-
-locale.setlocale(locale.LC_ALL, "")
-
 import gettext
-
-gettext.bindtextdomain("clamtk", "/usr/share/locale")
-gettext.textdomain("clamtk")
-_ = gettext.gettext
-
 import gi
 
 gi.require_version("Nautilus", "4.0")
@@ -32,6 +25,11 @@ gi.require_version("Nautilus", "4.0")
 from gi.repository import Nautilus
 from gi.repository import GObject
 
+locale.setlocale(locale.LC_ALL, "")
+
+gettext.bindtextdomain("clamtk", "/usr/share/locale")
+gettext.textdomain("clamtk")
+_ = gettext.gettext
 
 class OpenTerminalExtension(GObject.GObject, Nautilus.MenuProvider):
     def __init__(self):
