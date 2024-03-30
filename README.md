@@ -1,6 +1,8 @@
 # README for clamtk-gnome
 
-This readme file was last checked or updated 20240128.
+Note: This program is no longer maintained.
+
+This readme file was last checked or updated 20240330.
 
 clamtk-gnome is a simple plugin for
 [clamtk](https://github.com/dave-theunsub/clamtk) to allow a right-click, context menu scan of files or folders in the Nautilus file manager.
